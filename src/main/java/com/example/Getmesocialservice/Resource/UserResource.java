@@ -1,7 +1,7 @@
-package com.example.getmesocialservice.Resource;
+package com.example.Getmesocialservice.Resource;
 
-import com.example.getmesocialservice.Model.User;
-import com.example.getmesocialservice.Service.UserService;
+import com.example.Getmesocialservice.Model.User;
+import com.example.Getmesocialservice.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +16,7 @@ public class UserResource {
 
     @GetMapping("/user")
     public User getUser(){
-        return userService.getUser();
+      return userService.getUser();
+
     }
 }

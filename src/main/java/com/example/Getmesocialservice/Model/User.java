@@ -1,18 +1,10 @@
-package com.example.getmesocialservice.Model;
+package com.example.Getmesocialservice.Model;
 
 public class User {
-
     private String name;
     private String address;
     private int age;
-    private String profilePicUrl;
-
-    public User(String name, String address, int age, String profilePicUrl) {
-        this.name = name;
-        this.address = address;
-        this.age = age;
-        this.profilePicUrl = profilePicUrl;
-    }
+    private String  ProfilePicUrl;
 
     public String getName() {
         return name;
@@ -39,10 +31,20 @@ public class User {
     }
 
     public String getProfilePicUrl() {
-        return profilePicUrl;
+        return ProfilePicUrl;
     }
 
     public void setProfilePicUrl(String profilePicUrl) {
-        this.profilePicUrl = profilePicUrl;
+        ProfilePicUrl = profilePicUrl;
+    }
+
+    public User(String name, String address, int age, String profilePicUrl) {
+        this.name = name;
+        this.address = address;
+        this.age = age;
+        ProfilePicUrl = profilePicUrl;
+
+
+
     }
 }
