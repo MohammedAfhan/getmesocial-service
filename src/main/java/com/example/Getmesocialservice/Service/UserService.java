@@ -10,15 +10,20 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    public User saveUser(User user) {
+        return userRepository.save(user);
+    }
+/*
+
     public User getUser(){
         return userRepository.getUser();
     }
 
-    public User saveUser(User user) {
-        return userRepository.saveUser(user);
-    }
+
 
     public User allUser(User user) {
         return userRepository.allUser(user);
     }
+*/
 }

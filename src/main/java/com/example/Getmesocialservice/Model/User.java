@@ -1,10 +1,22 @@
 package com.example.Getmesocialservice.Model;
 
+import org.springframework.data.annotation.Id;
+
 public class User {
+
+    @Id
+    private String id;
     private String name;
-    private String address;
-    private int age;
+    private String email;
     private String  ProfilePicUrl;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -14,20 +26,12 @@ public class User {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getProfilePicUrl() {
@@ -36,15 +40,5 @@ public class User {
 
     public void setProfilePicUrl(String profilePicUrl) {
         ProfilePicUrl = profilePicUrl;
-    }
-
-    public User(String name, String address, int age, String profilePicUrl) {
-        this.name = name;
-        this.address = address;
-        this.age = age;
-        ProfilePicUrl = profilePicUrl;
-
-
-
     }
 }

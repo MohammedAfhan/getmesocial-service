@@ -12,19 +12,21 @@ public class UserResource {
     @Autowired
     private UserService userService;
 
+    @PostMapping("/user")
+    public User saveUser(@RequestBody User user){
+        return userService.saveUser(user);
+    }
+    /*
     @GetMapping("/user")
     public User getUser(){
       return userService.getUser();
 
     }
 
-    @PostMapping("/user")
-    public User saveUser(@RequestBody User user){
-        return userService.saveUser(user);
-    }
+
 
     @PostMapping("/user{allUser}")
     public User allUser(@RequestBody User user){
         return userService.allUser(user);
     }
-}
+*/}
